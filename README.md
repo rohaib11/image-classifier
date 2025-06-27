@@ -1,69 +1,91 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# VisionClassify - Image Classifier with TensorFlow.js
 
-Currently, two official plugins are available:
+An image classification application built with React and TensorFlow.js, where you can upload images and classify them directly in the browser using a pre-trained machine learning model.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Upload images directly from your local machine.
+- Classify images using TensorFlow.js and MobileNet model.
+- View classification results with confidence levels.
+- Responsive UI built with React and styled using TailwindCSS.
+- Dark mode toggle for a better user experience.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: React, TypeScript, TailwindCSS
+- **Machine Learning**: TensorFlow.js, MobileNet model
+- **Version Control**: Git, GitHub
+- **Development Server**: Vite (fast build tool)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Demo
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+You can view a live demo of the app (coming soon).
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Prerequisites
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Before getting started, make sure you have the following installed on your machine:
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Node.js**: Version 14.x or higher
+- **npm**: Version 6.x or higher
+
+## Installation
+
+To get started, follow these steps:
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/rohaib11/image-classifier.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```bash
+   cd image-classifier
+   ```
+
+3. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:5173` to view the application.
+
+## Usage
+
+1. **Upload an Image**: Click on the "Upload Image" button and select an image from your computer.
+2. **Classify Image**: After uploading the image, click the "Classify Image" button to get the classification results.
+3. **View Results**: The classification results will be displayed with the predicted label and the confidence percentage.
+
+## Dark Mode
+
+This app includes a dark mode toggle. You can switch between light and dark modes for a better user experience. Your preference is saved and persists across sessions.
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to fork the repository, make changes, and submit a pull request. Here are a few ways you can contribute:
+
+- Fix bugs or improve features.
+- Help write or update documentation.
+- Improve the UI/UX.
+
+Please follow the existing code style and structure when submitting a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgements
+
+- **TensorFlow.js**: For providing the MobileNet pre-trained model.
+- **React**: For the UI framework.
+- **TailwindCSS**: For the utility-first CSS framework.
+- **Vite**: For providing a fast development environment.
