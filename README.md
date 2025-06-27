@@ -3,6 +3,10 @@
 
 An image classification application built with React and TensorFlow.js, where you can upload images and classify them directly in the browser using a pre-trained machine learning model.
 
+## Screenshot
+![image](https://github.com/user-attachments/assets/ac62319c-b0ce-4146-8f34-3f4d9541154e)
+
+
 ## Features
 
 - Upload images directly from your local machine.
